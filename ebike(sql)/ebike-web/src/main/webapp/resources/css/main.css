@@ -1,0 +1,18 @@
+body
+{
+	font-size: 12px;
+	background-color:#dddddd;
+	
+}
+
+a
+{
+	color:orange;
+	font-weight:bold;
+	
+}
+
+a:hover
+{
+	color:white;
+}

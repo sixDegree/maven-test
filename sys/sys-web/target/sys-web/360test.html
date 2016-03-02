@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <title > Ext4Loader </title>
+<link rel="stylesheet" type="text/css"  href="resources/js/extjs4/resources/css/ext-all.css"/>
+<script type="text/javascript" src="resources/js/extjs4/ext-all-debug.js"></script> 
+<script type="text/javascript" src="app2.js"></script>
+
+<style type="text/css">
+/* style rows on mouseover */
+.x-grid-row-over .x-grid-cell-inner {
+    font-weight: bold;
+}
+</style>
+
+</head>
+<body>
+Hello
+<script type="text/javascript">
+	
+Ext.Loader.setConfig({enabled: true}); //开启Ext.Loader
+Ext.Loader.setPath({
+	'MyApp': 'resources/js/app',
+	'Ext.ux':'resources/js/extjs4/examples/ux'
+}); 
+	Ext.onReady(function(){
+		/* Ext.QuickTips.init();
+		Ext.require(['MyApp.view.security.UserList','MyApp.view.security.UserTpl']);
+	    Ext.create('Ext.container.Viewport',{
+			layout:'border',
+			items:[Ext.create('MyApp.view.security.UserDetail',{region:'center'})]
+		});  */
+		
+		/* var o={
+				width:500,
+				height:400,
+				title:'first window',
+				buttons:[{text:'OK'},{text:'cancel'}]
+		};
+		
+		var win=new Ext.Window(o);
+		win.show(); */
+
+		/* var viewport=new Ext.Viewport({
+			layout:'border',
+			items:[{title:'OK',region:'north',height:200},{title:'cancel',region:'center'}]
+		});
+		
+		viewport.show();  */
+		
+		Ext.define('UserTest',{
+			extend:'Ext.grid.Panel',
+			title:'UserTest',
+			alias:'widget.usertest',
+			columns:[
+				{xtype: 'rownumberer'},
+				{text:'标识',dataIndex:'id',width:50},
+				{text:'帐号',dataIndex:'account',flex:2},
+				{text:'密码',dataIndex:'password',flex:1},
+				{text:'是否可用',dataIndex:'enable',width:100}
+			],
+			columnLines: true,
+		
+			viewConfig : {
+				stripeRows: true
+			},
+			
+			initComponent:function(){
+				alert('UserTest InitComponent!');
+				var me=this;
+				me.store=Ext.create('MyApp.store.UserStore');
+		        this.callParent(arguments);
+			}
+		});
+
+		Ext.create('Ext.container.Viewport',{
+			layout:'border',
+			items:[
+			       {title:'OK',region:'north',height:200},
+			       {title:'cancel',region:'south'},
+			       Ext.create('UserTest',{region:'center'}),
+			       Ext.create('MyApp.view.Header',{region:'south'})
+			       ]
+		});
+		
+		 
+	});
+
+</script>
+</body>
+</html>

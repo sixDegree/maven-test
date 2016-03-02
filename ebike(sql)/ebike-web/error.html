@@ -1,0 +1,970 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+
+<tr>
+<td>2012-12-14 13:59:22</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">ContextLoader.java:initWebApplicationContext()方法中第307行出现错误 </font></td>
+<td title="错误信息">Context initialization failed</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from ServletContext resource [/security.xml]; nested exception is java.io.FileNotFoundException: Could not open ServletContext resource [/security.xml]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:341)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:527)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:441)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:771)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:424)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:763)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:249)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:293)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyServer.doStart(JettyServer.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:511)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:364)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyRunMojo.execute(JettyRunMojo.java:523)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/security.xml]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:328)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 54 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+
+<tr>
+<td>2012-12-14 14:00:29</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">ContextLoader.java:initWebApplicationContext()方法中第307行出现错误 </font></td>
+<td title="错误信息">Context initialization failed</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: The use of &quot;filters='none'&quot; is no longer supported. Please define a separate &lt;http&gt; element for the pattern you want to exclude and use the attribute &quot;security='none'&quot;.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Offending resource: URL [file:/E:/MySpace/ebike/ebike-web/target/classes/security.xml]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:72)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.http.HttpConfigurationBuilder.&lt;init&gt;(HttpConfigurationBuilder.java:127)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.http.HttpSecurityBeanDefinitionParser.createFilterChain(HttpSecurityBeanDefinitionParser.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.http.HttpSecurityBeanDefinitionParser.parse(HttpSecurityBeanDefinitionParser.java:99)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.SecurityNamespaceHandler.parse(SecurityNamespaceHandler.java:90)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1419)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1409)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:184)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:493)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:527)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:441)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:771)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:424)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:763)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:249)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:293)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyServer.doStart(JettyServer.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:511)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:364)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyRunMojo.execute(JettyRunMojo.java:523)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+
+<tr>
+<td>2012-12-14 14:03:39</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">ContextLoader.java:initWebApplicationContext()方法中第307行出现错误 </font></td>
+<td title="错误信息">Context initialization failed</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.filterChains': Cannot resolve reference to bean 'org.springframework.security.web.DefaultSecurityFilterChain#0' while setting bean property 'sourceList' with key [0]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.web.DefaultSecurityFilterChain#0': Cannot resolve reference to bean 'org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0' while setting constructor argument with key [2]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0': Cannot create inner bean '(inner bean)' of type [org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler] while setting bean property 'authenticationSuccessHandler'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#8': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'defaultTargetUrl' threw exception; nested exception is java.lang.IllegalArgumentException: defaultTarget must start with '/' or with 'http(s)'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedList(BeanDefinitionValueResolver.java:353)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:153)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1118)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:591)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:469)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:771)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:424)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:763)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:249)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:293)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyServer.doStart(JettyServer.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:511)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:364)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyRunMojo.execute(JettyRunMojo.java:523)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.web.DefaultSecurityFilterChain#0': Cannot resolve reference to bean 'org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0' while setting constructor argument with key [2]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0': Cannot create inner bean '(inner bean)' of type [org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler] while setting bean property 'authenticationSuccessHandler'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#8': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'defaultTargetUrl' threw exception; nested exception is java.lang.IllegalArgumentException: defaultTarget must start with '/' or with 'http(s)'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedList(BeanDefinitionValueResolver.java:353)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:153)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:616)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:148)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1035)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:939)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 59 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0': Cannot create inner bean '(inner bean)' of type [org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler] while setting bean property 'authenticationSuccessHandler'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#8': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'defaultTargetUrl' threw exception; nested exception is java.lang.IllegalArgumentException: defaultTarget must start with '/' or with 'http(s)'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:281)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1118)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 73 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#8': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'defaultTargetUrl' threw exception; nested exception is java.lang.IllegalArgumentException: defaultTarget must start with '/' or with 'http(s)'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1396)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1118)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:270)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 83 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'defaultTargetUrl' threw exception; nested exception is java.lang.IllegalArgumentException: defaultTarget must start with '/' or with 'http(s)'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:102)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:58)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1393)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 87 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+
+<tr>
+<td>2012-12-14 14:12:34</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">ContextLoader.java:initWebApplicationContext()方法中第307行出现错误 </font></td>
+<td title="错误信息">Context initialization failed</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: The use of &quot;filters='none'&quot; is no longer supported. Please define a separate &lt;http&gt; element for the pattern you want to exclude and use the attribute &quot;security='none'&quot;.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Offending resource: URL [file:/E:/MySpace/ebike/ebike-web/target/classes/security.xml]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:72)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.http.HttpConfigurationBuilder.&lt;init&gt;(HttpConfigurationBuilder.java:127)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.http.HttpSecurityBeanDefinitionParser.createFilterChain(HttpSecurityBeanDefinitionParser.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.http.HttpSecurityBeanDefinitionParser.parse(HttpSecurityBeanDefinitionParser.java:99)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.SecurityNamespaceHandler.parse(SecurityNamespaceHandler.java:90)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1419)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1409)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:184)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:493)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:527)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:441)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:771)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:424)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:763)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:249)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:293)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyServer.doStart(JettyServer.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:511)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:364)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyRunMojo.execute(JettyRunMojo.java:523)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+
+<tr>
+<td>2012-12-14 14:15:36</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">ContextLoader.java:initWebApplicationContext()方法中第307行出现错误 </font></td>
+<td title="错误信息">Context initialization failed</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: If you are using &lt;http&gt; to define an unsecured pattern, it cannot contain child elements.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Offending resource: URL [file:/E:/MySpace/ebike/ebike-web/target/classes/security.xml]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:72)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.http.HttpSecurityBeanDefinitionParser.createFilterChain(HttpSecurityBeanDefinitionParser.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.http.HttpSecurityBeanDefinitionParser.parse(HttpSecurityBeanDefinitionParser.java:99)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.SecurityNamespaceHandler.parse(SecurityNamespaceHandler.java:90)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1419)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1409)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:184)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:493)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:527)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:441)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:771)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:424)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:763)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:249)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:293)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyServer.doStart(JettyServer.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:511)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:364)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyRunMojo.execute(JettyRunMojo.java:523)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+
+<tr>
+<td>2012-12-14 14:17:49</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">ContextLoader.java:initWebApplicationContext()方法中第307行出现错误 </font></td>
+<td title="错误信息">Context initialization failed</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: If you are using &lt;http&gt; to define an unsecured pattern, it cannot contain child elements.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Offending resource: URL [file:/E:/MySpace/ebike/ebike-web/target/classes/security.xml]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:72)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.http.HttpSecurityBeanDefinitionParser.createFilterChain(HttpSecurityBeanDefinitionParser.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.http.HttpSecurityBeanDefinitionParser.parse(HttpSecurityBeanDefinitionParser.java:99)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.SecurityNamespaceHandler.parse(SecurityNamespaceHandler.java:90)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1419)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1409)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:184)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:493)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:527)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:441)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:771)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:424)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:763)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:249)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:293)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyServer.doStart(JettyServer.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:511)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:364)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyRunMojo.execute(JettyRunMojo.java:523)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+
+<tr>
+<td>2012-12-14 14:42:01</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">ContextLoader.java:initWebApplicationContext()方法中第307行出现错误 </font></td>
+<td title="错误信息">Context initialization failed</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: If you are using &lt;http&gt; to define an unsecured pattern, it cannot contain child elements.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Offending resource: URL [file:/E:/MySpace/ebike/ebike-web/target/classes/security.xml]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:72)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.http.HttpSecurityBeanDefinitionParser.createFilterChain(HttpSecurityBeanDefinitionParser.java:121)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.http.HttpSecurityBeanDefinitionParser.parse(HttpSecurityBeanDefinitionParser.java:99)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.config.SecurityNamespaceHandler.parse(SecurityNamespaceHandler.java:90)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1419)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1409)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:184)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:493)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:527)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:441)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:771)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:424)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:763)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:249)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:293)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyServer.doStart(JettyServer.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:511)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:364)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyRunMojo.execute(JettyRunMojo.java:523)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+</td></tr>
+</table>
+<br>
+</body></html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+
+<tr>
+<td>2012-12-14 16:42:41</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">FrameworkServlet.java:initServletBean()方法中第457行出现错误 </font></td>
+<td title="错误信息">Context initialization failed</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanDefinitionStoreException: Unexpected exception parsing XML document from ServletContext resource [/WEB-INF/ebike-servlet.xml]; nested exception is java.lang.OutOfMemoryError: PermGen space
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:412)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:527)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:441)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:631)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:588)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:645)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:508)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:449)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at javax.servlet.GenericServlet.init(GenericServlet.java:244)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:331)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:747)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:293)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyRunMojo.restartWebApp(JettyRunMojo.java:435)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyRunMojo$1.filesChanged(JettyRunMojo.java:394)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.Scanner.reportBulkChanges(Scanner.java:685)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.Scanner.reportDifferences(Scanner.java:551)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.Scanner.scan(Scanner.java:403)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.Scanner$1.run(Scanner.java:353)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.TimerThread.mainLoop(Timer.java:512)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.TimerThread.run(Timer.java:462)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.lang.OutOfMemoryError: PermGen space
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.ClassLoader.defineClass1(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.ClassLoader.defineClass(ClassLoader.java:620)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:124)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.URLClassLoader.defineClass(URLClassLoader.java:260)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.URLClassLoader.access$000(URLClassLoader.java:56)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.URLClassLoader$1.run(URLClassLoader.java:195)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.security.AccessController.doPrivileged(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:421)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:383)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.ClassLoader.defineClass1(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.ClassLoader.defineClass(ClassLoader.java:620)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:124)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.URLClassLoader.defineClass(URLClassLoader.java:260)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.URLClassLoader.access$000(URLClassLoader.java:56)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.URLClassLoader$1.run(URLClassLoader.java:195)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.security.AccessController.doPrivileged(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:421)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:383)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser.getMessageConverters(AnnotationDrivenBeanDefinitionParser.java:312)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser.parse(AnnotationDrivenBeanDefinitionParser.java:163)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.NamespaceHandlerSupport.parse(NamespaceHandlerSupport.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1419)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1409)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:184)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:493)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+
+<tr>
+<td>2012-12-14 17:05:47</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">ContextLoader.java:initWebApplicationContext()方法中第307行出现错误 </font></td>
+<td title="错误信息">Context initialization failed</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationFilter' defined in URL [file:/E:/MySpace/ebike/ebike-web/target/classes/security.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: authenticationManager must be specified
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1455)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:609)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:469)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:771)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:424)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:763)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:249)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:293)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyRunMojo.restartWebApp(JettyRunMojo.java:435)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyRunMojo$1.filesChanged(JettyRunMojo.java:394)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.Scanner.reportBulkChanges(Scanner.java:685)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.Scanner.reportDifferences(Scanner.java:551)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.Scanner.scan(Scanner.java:403)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.Scanner$1.run(Scanner.java:353)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.TimerThread.mainLoop(Timer.java:512)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.TimerThread.run(Timer.java:462)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.lang.IllegalArgumentException: authenticationManager must be specified
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.util.Assert.notNull(Assert.java:112)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.afterPropertiesSet(AbstractAuthenticationProcessingFilter.java:149)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 29 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+
+<tr>
+<td>2012-12-14 17:07:49</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">ContextLoader.java:initWebApplicationContext()方法中第307行出现错误 </font></td>
+<td title="错误信息">Context initialization failed</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationFilter' defined in URL [file:/E:/MySpace/ebike/ebike-web/target/classes/security.xml]: Cannot resolve reference to bean 'authenticationManager' while setting bean property 'authenticationManager'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'authenticationManager' is defined
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1118)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:609)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:469)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:771)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:424)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:763)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:249)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:293)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyRunMojo.restartWebApp(JettyRunMojo.java:435)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.mortbay.jetty.plugin.JettyRunMojo$1.filesChanged(JettyRunMojo.java:394)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.Scanner.reportBulkChanges(Scanner.java:685)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.Scanner.reportDifferences(Scanner.java:551)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.Scanner.scan(Scanner.java:403)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jetty.util.Scanner$1.run(Scanner.java:353)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.TimerThread.mainLoop(Timer.java:512)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.TimerThread.run(Timer.java:462)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'authenticationManager' is defined
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1095)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:277)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+</td></tr>

@@ -1,0 +1,172 @@
+#
+# An unexpected error has been detected by Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x6d9ad9a1, pid=6608, tid=3996
+#
+# Java VM: Java HotSpot(TM) Client VM (1.6.0_01-b06 mixed mode, sharing)
+# Problematic frame:
+# V  [jvm.dll+0x13d9a1]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x01671400):  JavaThread "main" [_thread_in_vm, id=3996]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x479cb703
+
+Registers:
+EAX=0x479cb6ff, EBX=0x00000014, ECX=0x0165ab40, EDX=0x2c22c620
+ESP=0x0016eb04, EBP=0x00000002, ESI=0x01657c94, EDI=0x01657c94
+EIP=0x6d9ad9a1, EFLAGS=0x00010206
+
+Top of Stack: (sp=0x0016eb04)
+0x0016eb04:   2c22c620 6d9aea32 01657c94 01671400
+0x0016eb14:   2c22c620 01671400 6d9f80ba 01657c94
+0x0016eb24:   01671400 01671400 0016ebbc 01657c30
+0x0016eb34:   01657fdc 01657c80 01657c3c 00000013
+0x0016eb44:   6d9f8769 0016ebbc 01657c38 00000000
+0x0016eb54:   01671400 01671400 01671400 01657c30
+0x0016eb64:   6d9f87a3 0016ebbc 01657c30 00000000
+0x0016eb74:   01671400 00000000 01671400 00000000 
+
+Instructions: (pc=0x6d9ad9a1)
+0x6d9ad991:   7b 4e f5 ff 83 c4 14 33 c0 5e c3 8b 16 89 42 3c
+0x6d9ad9a1:   8b 48 04 8b 16 89 4a 40 8b 40 04 5e c3 cc cc 56 
+
+
+Stack: [0x00120000,0x00170000),  sp=0x0016eb04,  free space=314k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x13d9a1]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.reflect.NativeConstructorAccessorImpl.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+17
+j  sun.reflect.DelegatingConstructorAccessorImpl.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+5
+j  java.lang.reflect.Constructor.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+92
+j  java.lang.reflect.Proxy.newProxyInstance(Ljava/lang/ClassLoader;[Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;+37
+j  sun.reflect.annotation.AnnotationParser.annotationForMap(Ljava/lang/Class;Ljava/util/Map;)Ljava/lang/annotation/Annotation;+21
+j  sun.reflect.annotation.AnnotationParser.parseAnnotation(Ljava/nio/ByteBuffer;Lsun/reflect/ConstantPool;Ljava/lang/Class;Z)Ljava/lang/annotation/Annotation;+258
+j  sun.reflect.annotation.AnnotationParser.parseAnnotations2([BLsun/reflect/ConstantPool;Ljava/lang/Class;)Ljava/util/Map;+39
+j  sun.reflect.annotation.AnnotationParser.parseAnnotations([BLsun/reflect/ConstantPool;Ljava/lang/Class;)Ljava/util/Map;+11
+j  java.lang.reflect.Field.declaredAnnotations()Ljava/util/Map;+28
+j  java.lang.reflect.Field.getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;+13
+j  com.google.inject.spi.InjectionPoint.getAtInject(Ljava/lang/reflect/AnnotatedElement;)Ljava/lang/annotation/Annotation;+4
+j  com.google.inject.spi.InjectionPoint.getInjectionPoints(Lcom/google/inject/TypeLiteral;ZLcom/google/inject/internal/Errors;)Ljava/util/Set;+133
+j  com.google.inject.spi.InjectionPoint.forInstanceMethodsAndFields(Lcom/google/inject/TypeLiteral;)Ljava/util/Set;+11
+j  com.google.inject.spi.InjectionPoint.forInstanceMethodsAndFields(Ljava/lang/Class;)Ljava/util/Set;+4
+j  com.google.inject.internal.BindingBuilder.toProvider(Lcom/google/inject/Provider;)Lcom/google/inject/internal/BindingBuilder;+15
+j  com.google.inject.internal.BindingBuilder.toProvider(Lcom/google/inject/Provider;)Lcom/google/inject/binder/ScopedBindingBuilder;+2
+j  org.sonatype.guice.plexus.binders.PlexusTypeBinder.hear(Lorg/codehaus/plexus/component/annotations/Component;Lorg/sonatype/guice/bean/reflect/DeferredClass;Ljava/lang/Object;)V+145
+j  org.sonatype.guice.plexus.binders.PlexusXmlBeanModule.configure(Lcom/google/inject/Binder;)Lorg/sonatype/guice/plexus/config/PlexusBeanSource;+132
+j  org.sonatype.guice.plexus.binders.PlexusBindingModule.configure(Lcom/google/inject/Binder;)V+41
+j  com.google.inject.spi.Elements$RecordingBinder.install(Lcom/google/inject/Module;)V+31
+j  com.google.inject.spi.Elements.getElements(Lcom/google/inject/Stage;Ljava/lang/Iterable;)Ljava/util/List;+40
+j  com.google.inject.spi.Elements.getElements([Lcom/google/inject/Module;)Ljava/util/List;+7
+j  org.sonatype.guice.bean.binders.MergedModule.configure(Lcom/google/inject/Binder;)V+48
+j  com.google.inject.spi.Elements$RecordingBinder.install(Lcom/google/inject/Module;)V+31
+j  com.google.inject.spi.Elements.getElements(Lcom/google/inject/Stage;Ljava/lang/Iterable;)Ljava/util/List;+40
+j  com.google.inject.internal.InjectorShell$Builder.build(Lcom/google/inject/internal/Initializer;Lcom/google/inject/internal/ProcessedBindingData;Lcom/google/inject/internal/util/Stopwatch;Lcom/google/inject/internal/Errors;)Ljava/util/List;+99
+j  com.google.inject.internal.InternalInjectorCreator.build()Lcom/google/inject/Injector;+48
+j  com.google.inject.Guice.createInjector(Lcom/google/inject/Stage;Ljava/lang/Iterable;)Lcom/google/inject/Injector;+15
+j  com.google.inject.Guice.createInjector(Ljava/lang/Iterable;)Lcom/google/inject/Injector;+4
+j  com.google.inject.Guice.createInjector([Lcom/google/inject/Module;)Lcom/google/inject/Injector;+4
+j  org.codehaus.plexus.DefaultPlexusContainer.addPlexusInjector(Ljava/util/List;[Lcom/google/inject/Module;)V+88
+j  org.codehaus.plexus.DefaultPlexusContainer.<init>(Lorg/codehaus/plexus/ContainerConfiguration;[Lcom/google/inject/Module;)V+380
+j  org.codehaus.plexus.DefaultPlexusContainer.<init>(Lorg/codehaus/plexus/ContainerConfiguration;)V+5
+j  org.apache.maven.cli.MavenCli.container(Lorg/apache/maven/cli/MavenCli$CliRequest;)V+81
+j  org.apache.maven.cli.MavenCli.doMain(Lorg/apache/maven/cli/MavenCli$CliRequest;)I+27
+j  org.apache.maven.cli.MavenCli.main([Ljava/lang/String;Lorg/codehaus/plexus/classworlds/ClassWorld;)I+18
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+87
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+161
+j  org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced([Ljava/lang/String;)V+45
+j  org.codehaus.plexus.classworlds.launcher.Launcher.launch([Ljava/lang/String;)V+2
+j  org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode([Ljava/lang/String;)I+97
+j  org.codehaus.plexus.classworlds.launcher.Launcher.main([Ljava/lang/String;)V+1
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x016e9800 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=2724]
+  0x016de400 JavaThread "CompilerThread0" daemon [_thread_blocked, id=11720]
+  0x016dd000 JavaThread "Attach Listener" daemon [_thread_blocked, id=9288]
+  0x016dcc00 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=10244]
+  0x0169e400 JavaThread "Finalizer" daemon [_thread_blocked, id=11564]
+  0x01692400 JavaThread "Reference Handler" daemon [_thread_blocked, id=8824]
+=>0x01671400 JavaThread "main" [_thread_in_vm, id=3996]
+
+Other Threads:
+  0x01689000 VMThread [id=9216]
+  0x016ea800 WatcherThread [id=11340]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 960K, used 454K [0x236d0000, 0x237d0000, 0x23bb0000)
+  eden space 896K,  48% used [0x236d0000, 0x2373d940, 0x237b0000)
+  from space 64K,  25% used [0x237b0000, 0x237b4160, 0x237c0000)
+  to   space 64K,   0% used [0x237c0000, 0x237c0000, 0x237d0000)
+ tenured generation   total 4096K, used 848K [0x23bb0000, 0x23fb0000, 0x276d0000)
+   the space 4096K,  20% used [0x23bb0000, 0x23c84180, 0x23c84200, 0x23fb0000)
+ compacting perm gen  total 12288K, used 2789K [0x276d0000, 0x282d0000, 0x2b6d0000)
+   the space 12288K,  22% used [0x276d0000, 0x27989668, 0x27989800, 0x282d0000)
+    ro space 8192K,  66% used [0x2b6d0000, 0x2bc1c5d0, 0x2bc1c600, 0x2bed0000)
+    rw space 12288K,  52% used [0x2bed0000, 0x2c518c98, 0x2c518e00, 0x2cad0000)
+
+Dynamic libraries:
+0x00400000 - 0x00423000 	D:\Soft\Java\bin\javaw.exe
+0x77190000 - 0x772cc000 	C:\Windows\SYSTEM32\ntdll.dll
+0x75d90000 - 0x75e64000 	C:\Windows\system32\kernel32.dll
+0x753b0000 - 0x753fa000 	C:\Windows\system32\KERNELBASE.dll
+0x755e0000 - 0x75680000 	C:\Windows\system32\ADVAPI32.dll
+0x75ee0000 - 0x75f8c000 	C:\Windows\system32\msvcrt.dll
+0x75ec0000 - 0x75ed9000 	C:\Windows\SYSTEM32\sechost.dll
+0x75750000 - 0x757f1000 	C:\Windows\system32\RPCRT4.dll
+0x75c70000 - 0x75d39000 	C:\Windows\system32\USER32.dll
+0x75e70000 - 0x75ebe000 	C:\Windows\system32\GDI32.dll
+0x75fc0000 - 0x75fca000 	C:\Windows\system32\LPK.dll
+0x76f50000 - 0x76fed000 	C:\Windows\system32\USP10.dll
+0x773a0000 - 0x773bf000 	C:\Windows\system32\IMM32.DLL
+0x772d0000 - 0x7739c000 	C:\Windows\system32\MSCTF.dll
+0x7c340000 - 0x7c396000 	D:\Soft\Java\jre\bin\msvcr71.dll
+0x6d870000 - 0x6dab7000 	D:\Soft\Java\jre\bin\client\jvm.dll
+0x73680000 - 0x736b2000 	C:\Windows\system32\WINMM.dll
+0x751e0000 - 0x7522b000 	C:\Windows\system32\apphelp.dll
+0x6d3c0000 - 0x6d3c8000 	D:\Soft\Java\jre\bin\hpi.dll
+0x75800000 - 0x75805000 	C:\Windows\system32\PSAPI.DLL
+0x6d820000 - 0x6d82c000 	D:\Soft\Java\jre\bin\verify.dll
+0x6d460000 - 0x6d47f000 	D:\Soft\Java\jre\bin\java.dll
+0x6d860000 - 0x6d86f000 	D:\Soft\Java\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dmaven.home=D:\Soft\Maven3.0.4 -Dclassworlds.conf=E:\MySpace\.metadata\.plugins\org.eclipse.m2e.core\launches\m2conf40442.tmp -Dfile.encoding=GBK
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher -B -s E:\maven\settings.xml jetty:stop
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\Soft\Java
+CLASSPATH=D:\Soft\Java\jre\lib\rt.jar;.
+PATH=D:/Soft/Java/bin/../jre/bin/client;D:/Soft/Java/bin/../jre/bin;D:/Soft/Java/bin/../jre/lib/i386;D:\Soft\nexus-2.2-01-bundle\nexus-2.2-01\bin;D:\Soft\Maven3.0.4\bin;D:\oracle\product\10.2.0\client_2\bin;D:\oracle\product\10.2.0\client_1;C:\Program Files\Intel\iCLS Client\;D:\Soft\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Windows7Master;C:\Program Files\Common Files\Thunder Network\KanKan\Codecs;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\VisualSVN\bin;E:\svn\Subversion\bin;C:\Program Files\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;D:\Soft\eclipse-jee;
+USERNAME=cj
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.1 Build 7600 
+
+CPU:total 2 family 6, cmov, cx8, fxsr, mmx, sse, sse2
+
+Memory: 4k page, physical 2001556k(86996k free), swap 4059796k(5104k free)
+
+vm_info: Java HotSpot(TM) Client VM (1.6.0_01-b06) for windows-x86, built on Mar 14 2007 00:24:02 by "java_re" with unknown MS VC++:1310
+

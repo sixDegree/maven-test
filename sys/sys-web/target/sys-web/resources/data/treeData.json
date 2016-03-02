@@ -1,0 +1,28 @@
+{children:[
+	{id:1,text:'Test1',leaf:true,type:'URL'},
+	{id:2,text:'Test2',leaf:true,type:'NONE'},
+	{id:3,text:'Test3',expanded:true,
+		children:[
+			{id:31,text:'child31',leaf:true,type:'NONE'},
+			{id:32,text:'child32',leaf:true,type:'URL'},
+			{id:33,text:'child33',leaf:true,type:'URL'}
+		]
+	},
+	{id:4,text:'Test4',leaf:true,type:'NONE'},
+	{id:5,text:'Test5',leaf:true,type:'URL'},
+	{id:6,text:'Test6',
+		children:[
+			{id:61,text:'child61',leaf:true},
+			{id:62,text:'child62',
+				children:[
+					{id:621,text:'child621',leaf:true,type:'NONE'},
+					{id:622,text:'child622',leaf:true,type:'URL'},
+					{id:623,text:'child623',leaf:true,type:'URL'}
+				]
+			},
+			{id:63,text:'child63',leaf:true,type:'URL'}
+		]
+	},
+	{id:7,text:'Test7',leaf:true,type:'NONE'},
+	{id:8,text:'Test8',leaf:true,type:'URL'}
+]}

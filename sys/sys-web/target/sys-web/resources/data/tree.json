@@ -1,0 +1,10 @@
+{
+	children:{id:1,text:'Product',
+			children:[
+				{id:11,text:'PropertyType',leaf:true},
+				{id:12,text:'Properties',leaf:true},
+				{id:13,text:'Images',leaf:true},
+				{id:14,text:'ProductList',leaf:true}
+			]
+	}
+}

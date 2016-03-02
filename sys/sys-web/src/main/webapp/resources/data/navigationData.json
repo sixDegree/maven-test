@@ -1,0 +1,29 @@
+[
+	{id:1,text:'Product',
+		children:[
+			{id:11,text:'PropertyType',leaf:true,type:'URL'},
+			{id:12,text:'Properties',leaf:true,type:'URL'},
+			{id:13,text:'Images',leaf:true,type:'URL'},
+			{id:14,text:'ProductList',leaf:true,type:'URL'}
+		]},
+	{id:2,text:'Security',
+		children:[
+			{id:21,text:'Resources',leaf:true,type:'URL'},
+			{id:22,text:'Privileges',leaf:true,type:'URL'},
+			{id:23,text:'Roles',leaf:true,type:'URL'},
+			{id:24,text:'UserList',leaf:true,type:'COMPONENT',typeValue:'MyApp.view.security.UserList'},
+			{id:25,text:'UserDetail',leaf:true,type:'COMPONENT',typeValue:'MyApp.view.security.UserDetail'},
+			{id:26,text:'UserDetailByUrl',leaf:true,type:'URL',typeValue:'userDetail.html'}
+		]},
+	{id:3,text:'Administration',
+		children:[
+			{id:31,text:'SysConfig',leaf:true,type:'URL'},
+			{id:32,text:'AutoConfig',leaf:true,type:'URL'}
+		]},
+	{id:4,text:'Help',
+		children:[
+			{id:41,text:'Document',leaf:true,type:'URL'},
+			{id:42,text:'Contract',leaf:true,type:'URL'},
+			{id:43,text:'Forum',leaf:true,type:'URL'}
+		]}
+]

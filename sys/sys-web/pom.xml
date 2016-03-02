@@ -1,0 +1,123 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+ <parent>
+	<groupId>com.cj.sys</groupId>
+    <artifactId>sys-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+	<relativePath>../sys-parent/pom.xml</relativePath>
+ </parent>
+  <artifactId>sys-web</artifactId>
+  <packaging>war</packaging>
+  <name>sys-web</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
+    
+     <dependency>
+	 	<groupId>${project.groupId}</groupId>
+	 	<artifactId>sys-core</artifactId>
+	 </dependency>
+	 
+	 <dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+	</dependency>
+	 <dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+	</dependency>
+			
+	<dependency>
+		<groupId>org.codehaus.jackson</groupId>
+		<artifactId>jackson-mapper-asl</artifactId>
+	</dependency>
+	
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>jstl</groupId>
+		<artifactId>jstl</artifactId>
+	</dependency>
+	<!-- <dependency>
+		<groupId>opensymphony</groupId>
+		<artifactId>sitemesh</artifactId>
+	</dependency> -->
+	<dependency>
+		<groupId>taglibs</groupId>
+		<artifactId>standard</artifactId>
+	</dependency> 
+	
+	<dependency>
+		<groupId>commons-beanutils</groupId>
+		<artifactId>commons-beanutils</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>commons-collections</groupId>
+		<artifactId>commons-collections</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>net.sf.json-lib</groupId>
+		<artifactId>json-lib</artifactId>
+	</dependency>
+			
+  </dependencies>
+  <build>
+    <finalName>sys-web</finalName>
+   <plugins>
+   
+		<!-- 
+		Tomcat插件发布Web 
+		cargo:start		cargo:run	cargo:stop 
+		1.发布到独立空间中
+		2.发布到tomcat容器中（webapps下）
+		-->
+		
+		<plugin> 
+			<groupId>org.codehaus.cargo</groupId> 
+			<artifactId>cargo-maven2-plugin</artifactId> 
+			<configuration> 
+			
+				<!-- 配置Tomcat在本地的路径 --> 
+				<container> 
+					<containerId>tomcat7x</containerId> 
+					<home>D:\Soft\tomcat7</home> 
+				</container> 
+				
+				<!-- 配置容器信息 -->
+				
+				<!--
+				方式一： 
+				statndalone:独立运行，会在特定的目录加载相应的web项目,不会加载tomcat中原有的项目;
+				home:希望加载路径的目录
+				properties:可以设置相应的端口的配置
+				 --> 
+				 <configuration>
+					<type>standalone</type> 
+					<home>${project.build.directory}/tomcat7</home>
+					<properties>	
+						<cargo.servlet.port>7676</cargo.servlet.port> 
+					</properties>
+				</configuration> 
+				
+				<!-- 
+				方式二：
+				 existing:会把项目发布到系统的Tomcat中的webapps中
+				 home设置为系统的tomcat目录    
+				-->
+				<!-- <configuration>
+					<type>existing</type> 
+					<home>D:\Soft\tomcat7</home> 
+				</configuration> -->
+				
+			</configuration>
+		 </plugin>
+				
+    </plugins> 
+  </build>
+</project>

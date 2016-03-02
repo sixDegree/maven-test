@@ -1,0 +1,1088 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+
+<tr>
+<td>2012-12-07 09:09:00</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1f4cdd2] to prepare test instance [com.cj.ebike.service.ProductTest@f4ca49]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:952)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:821)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 34 more
+</td></tr>
+
+<tr>
+<td>2012-12-07 09:09:00</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1f4cdd2] to prepare test instance [com.cj.ebike.service.ProductTest@510dc2]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:952)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:821)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 34 more
+</td></tr>
+
+<tr>
+<td>2012-12-07 09:09:00</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1f4cdd2] to prepare test instance [com.cj.ebike.service.ProductTest@15e3dc4]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:952)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:821)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 34 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+
+<tr>
+<td>2012-12-07 09:15:19</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@173a64a] to prepare test instance [com.cj.ebike.service.ProductTest@1aa5882]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:952)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:821)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 34 more
+</td></tr>
+
+<tr>
+<td>2012-12-07 09:15:19</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@173a64a] to prepare test instance [com.cj.ebike.service.ProductTest@cbf92]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:952)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:821)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 34 more
+</td></tr>
+
+<tr>
+<td>2012-12-07 09:15:19</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@173a64a] to prepare test instance [com.cj.ebike.service.ProductTest@1c4a2d3]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:952)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:821)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 34 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+
+<tr>
+<td>2012-12-07 09:16:12</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@54570a] to prepare test instance [com.cj.ebike.service.ProductTest@11e7cc6]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:952)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:821)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 34 more
+</td></tr>
+
+<tr>
+<td>2012-12-07 09:16:12</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@54570a] to prepare test instance [com.cj.ebike.service.ProductTest@1ad6c98]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:952)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:821)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 34 more
+</td></tr>
+
+<tr>
+<td>2012-12-07 09:16:12</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@54570a] to prepare test instance [com.cj.ebike.service.ProductTest@b49b19]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:952)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:821)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 34 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+
+<tr>
+<td>2012-12-07 09:29:28</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@aa3e5b] to prepare test instance [com.cj.ebike.service.ProductTest@e3e881]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'productService' must be of type [com.cj.ebike.service.ProductService], but was actually of type [$Proxy26]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'productService' must be of type [com.cj.ebike.service.ProductService], but was actually of type [$Proxy26]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:443)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:417)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:559)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:150)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+</td></tr>
+
+<tr>
+<td>2012-12-07 09:29:28</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@aa3e5b] to prepare test instance [com.cj.ebike.service.ProductTest@4eb585]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'productService' must be of type [com.cj.ebike.service.ProductService], but was actually of type [$Proxy26]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'productService' must be of type [com.cj.ebike.service.ProductService], but was actually of type [$Proxy26]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:443)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:417)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:559)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:150)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+</td></tr>
+
+<tr>
+<td>2012-12-07 09:29:28</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@aa3e5b] to prepare test instance [com.cj.ebike.service.ProductTest@16f3619]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'productService' must be of type [com.cj.ebike.service.ProductService], but was actually of type [$Proxy26]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'productService' must be of type [com.cj.ebike.service.ProductService], but was actually of type [$Proxy26]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:443)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:417)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:559)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:150)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+
+<tr>
+<td>2012-12-07 09:30:29</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1c81ac0] to prepare test instance [com.cj.ebike.service.ProductTest@54570a]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'productService' must be of type [com.cj.ebike.service.ProductService], but was actually of type [$Proxy25]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'productService' must be of type [com.cj.ebike.service.ProductService], but was actually of type [$Proxy25]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:443)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:417)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:559)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:150)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+</td></tr>
+
+<tr>
+<td>2012-12-07 09:30:29</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1c81ac0] to prepare test instance [com.cj.ebike.service.ProductTest@739aa3]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'productService' must be of type [com.cj.ebike.service.ProductService], but was actually of type [$Proxy25]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'productService' must be of type [com.cj.ebike.service.ProductService], but was actually of type [$Proxy25]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:443)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:417)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:559)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:150)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+</td></tr>
+
+<tr>
+<td>2012-12-07 09:30:29</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1c81ac0] to prepare test instance [com.cj.ebike.service.ProductTest@1ad6c98]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'productService' must be of type [com.cj.ebike.service.ProductService], but was actually of type [$Proxy25]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'productService' must be of type [com.cj.ebike.service.ProductService], but was actually of type [$Proxy25]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:443)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:417)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:559)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:150)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>系统错误日志</title>
+<style type="text/css">
+<!--
+body, table {font-family: '宋体',arial,sans-serif; font-size: 12px;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>执行时间</th>
+<th>级别</th>
+<th>所在行</th>
+<th>错误信息</th>
+</tr>
+<br></br>
+
+<tr>
+<td>2012-12-07 09:53:04</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1d47f59] to prepare test instance [com.cj.ebike.service.ProductTest@1f4cdd2]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:952)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:821)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 34 more
+</td></tr>
+
+<tr>
+<td>2012-12-07 09:53:04</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1d47f59] to prepare test instance [com.cj.ebike.service.ProductTest@1ce9f9d]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:952)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:821)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 34 more
+</td></tr>
+
+<tr>
+<td>2012-12-07 09:53:04</td>
+<td title="级别"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="错误"><font color="red">TestContextManager.java:prepareTestInstance()方法中第324行出现错误</font></td>
+<td title="错误信息">Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1d47f59] to prepare test instance [com.cj.ebike.service.ProductTest@510dc2]</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="4">org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.cj.ebike.service.ProductTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:597)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.cj.ebike.service.ProductService com.cj.ebike.service.ProductTest.productService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 32 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.cj.ebike.service.ProductService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.inject.Inject()}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:952)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:821)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 34 more
+</td></tr>

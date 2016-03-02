@@ -1,0 +1,9 @@
+Ext.define('MyApp.model.UserModel',{
+	extend:'Ext.data.Model',
+	fields:[
+		{name:'id',type:'int'},
+		{name:'account',type:'string'},
+		{name:'password',type:'string'},
+		{name:'enable',type:'bool'}
+	]
+});

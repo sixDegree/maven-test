@@ -1,0 +1,9 @@
+Ext.define('MyApp.store.Menu',{
+	extend:'Ext.data.TreeStore',
+	model:'MyApp.model.Node',
+	root:{name:'people',expanded:true},
+	proxy:{
+		type:'ajax',
+		url:'resources/data/menu.json' 
+	}
+})

@@ -1,0 +1,8 @@
+[
+	{id:1,account:'admin',password:'51ca5dff068c393899233251450d95e2',enable:true},
+	{id:2,account:'chenjin',password:'f8750d3b7ef4e21490c3a973bae2e76d',enable:true},
+	{id:3,account:'张三',password:'51ca5dff068c393899233251450d95e2',enable:false},
+	{id:4,account:'李四',password:'f8750d3b7ef4e21490c3a973bae2e76d',enable:true},
+	{id:5,account:'王五',password:'51ca5dff068c393899233251450d95e2',enable:false},
+	{id:6,account:'小赵',password:'f8750d3b7ef4e21490c3a973bae2e76d',enable:true}
+]

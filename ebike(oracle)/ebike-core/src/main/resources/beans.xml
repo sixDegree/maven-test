@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<context:annotation-config/>
+	<context:component-scan base-package="com.cj.ebike"/>
+	<!-- <context:property-placeholder location="classpath:jdbc.properties"/> -->
+	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	    <property name="locations">
+	        <value>classpath:jdbc.properties</value>
+	    </property>
+	</bean>
+	
+	<bean id="dataSource" destroy-method="close" class="org.apache.commons.dbcp.BasicDataSource">
+	    <property name="driverClassName" value="${jdbc.driverClassName}"/>
+	    <property name="url" value="${jdbc.url}"/>
+	    <property name="username" value="${jdbc.username}"/>
+	    <property name="password" value="${jdbc.password}"/>
+
+	    <!-- 配置连接池的初始值 -->
+		<property name="initialSize" value="1"/>
+		<!-- 连接池的最大值 -->
+		<!-- <property name="maxActive" value="500"/> -->
+		<!-- 最大空闲时，当经过一个高峰之后，连接池可以将一些用不到的连接释放，一直减少到maxIdle为止 -->
+		<!-- <property name="maxIdle" value="2"/> -->
+		<!-- 当最小空闲时，当连接少于minIdle时会自动去申请一些连接 -->
+		<property name="minIdle" value="1"/>
+		<property name="maxActive" value="100"/>  
+		<property name="maxIdle" value="20"/>  
+		<property name="maxWait" value="1000"/> 
+	</bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<!-- <prop key="javax.persistence.validation.mode">none</prop> -->
+			</props>	
+		</property>
+		
+		<property name="packagesToScan">
+			<list>
+				<value>com.cj.ebike.entity</value>
+			</list>
+		</property>
+	</bean>
+	
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+	
+	
+	<!-- 声明式事务 -->
+	<bean id="txManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="list*" propagation="REQUIRED" read-only="true"/>
+			<tx:method name="get*" propagation="REQUIRED" read-only="true"/>
+			<tx:method name="detail*" propagation="REQUIRED" read-only="true"/>
+			<tx:method name="*"/>
+		</tx:attributes>
+	</tx:advice>
+	
+	<aop:config>
+		<aop:pointcut expression="execution(* com.cj.ebike.service.*.*(..))" id="ebikeService"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="ebikeService"/>
+	</aop:config>
+
+	<!-- 声明式日志 -->
+	<bean id="loggerHandler" class="com.cj.ebike.aop.LoggerHandler"/>
+	<aop:config>
+		<!-- <aop:pointcut expression="* com.ebike.service.ProductService.list()" id="method"/> -->
+		<aop:aspect ref="loggerHandler">
+			<aop:pointcut expression="execution(public * com.cj.ebike.dao.impl.ProductDAOImpl.list())" id="method"/>
+			<aop:before method="beforeClass" pointcut-ref="method"/>
+			<!-- <aop:after-returning method="afterReturning" pointcut="execution(public * com.cj.ebike.dao.impl.ProductDAOImpl.list())"/> -->
+			<!-- <aop:after-returning method="logArgAndReturn" pointcut="execution(public * com.cj.ebike.dao.impl.ProductDAOImpl.load(..))" returning="returnObj"/> -->
+			<aop:around method="logAround" pointcut="execution(public * com.cj.ebike.dao.impl.ProductDAOImpl.load(..))" />
+		</aop:aspect>
+	</aop:config>
+	
+</beans>

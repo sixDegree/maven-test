@@ -1,0 +1,42 @@
+1. first/01,02 :Maven 初体验，手动编写的项目，02依赖于01，cmd下mvn生成
+
+2. users : Maven 完整项目
+- user-aggregation
+	+ 只有一个pom.xml文件，聚合所有模块 （<packaging>为pom，<modules> 聚合各模块）
+	+ 可与user-parent合并，省去
+				 
+- user-parent
+	+ 父模块，只有一个pom.xml文件,<packaging>为pom
+	+ 可加入<modules> 聚合各模块而省去user-parent模块
+	+ <properties> 添加属性
+	+ <dependencyManagement>管理依赖
+	+ <build><pluginManagement>管理插件
+	
+- user-core : 子模块 vo 使用MySQL，Hibernate4.1.7.Final
+- user-log : 子模块 log4j 日志
+- user-dao  
+- user-service
+- user-web
+	+ web项目（maven-archetype-webapp），需加入servlet-api依赖包（scope为provided 编译和测试的过程有效，最后生成war包时不会加入）
+	+ hello.jsp (web.xml老版本默认会忽略EL，要使用EL表达式，需在jsp页面加入： <%@ page isELIgnored="false" %> 或者使用新版本的web.xml)
+	+ 使用jetty，运行 jetty:run
+
+
+3. ebike : Maven web项目，使用 Hibernate 4.1.7.Final + SpringWeb3.1.2.RELEASE + SpringSecurity 3.1.3.RELEASE,slf-log4j
+	+ 包含 ebike-parent,ebike-core (Hibernate:beans.xml),ebike-dao,ebike-service,ebike-web(SpringSecurity: security.xml,SpringMVC:ebike-servlet.xml)
+	+ pom.xml中使用第三方jdbc驱动包，测试，jetty，report，site发布
+	+ ebike-web使用spring-security Md5加密，匿名
+	+ 有2个版本：ebike(oracle) 使用oracle数据库 ， ebike(sql) 使用sql2008数据库
+						
+4. sys:Maven web项目
+	+ 包含sys-parent,sys-core,sys-web
+	+ pom.xml 中 发布项目到自定义reponsitories中
+	+ Hibernate4,SpringWeb 3 ,SpringSecurity,slf-log4j,fileupload,模板opensymphony
+	+ sys-parent 中使用jetty ，sys-web 中使用cargo（tomcat）
+	+ 前端使用extjs4 （Extjs4 首次使用）
+		
+5. maven-hello-plugin : 自开发的maven plugin项目（孔浩所写）
+
+
+
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:security="http://www.springframework.org/schema/security"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+          http://www.springframework.org/schema/security
+          http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+        
+  <security:http pattern="/index.jsp" security="none"/>
+  <security:http pattern="/login*" security="none"/>
+  
+	<security:http auto-config="true" >
+		<security:intercept-url pattern="/product/**" access="ROLE_USER"  />
+		<security:form-login login-page="/login.jsp" 
+			authentication-failure-url="/login.jsp"
+			default-target-url="/product/list"/>
+		<security:logout logout-success-url="/index.jsp"/>
+	</security:http>
+	
+	<bean id="authenticationFilter" class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter"> 
+	  <property name="authenticationManager" ref="authenticationManager"/> 
+	  <property name="filterProcessesUrl" value="/common/login-process"/> 
+	</bean>  
+	
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider>
+			<!-- <security:password-encoder hash="md5">
+				<security:salt-source user-property="username"/>
+			</security:password-encoder> -->
+			<security:user-service>
+				<security:user name="chenjin" password="123" authorities="ROLE_USER"/>
+			</security:user-service>
+		</security:authentication-provider>
+	</security:authentication-manager>
+    
+</beans>

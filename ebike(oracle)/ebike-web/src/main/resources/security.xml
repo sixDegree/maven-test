@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:security="http://www.springframework.org/schema/security"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+          http://www.springframework.org/schema/security
+          http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+    
+    <!-- 法一 ： 最简配置，使用默认的login
+  <security:http auto-config="true"> 
+		<security:intercept-url pattern="/product/**" access="ROLE_USER"  />
+  </security:http> -->
+	
+  <!-- 法二 ：使用自己的login页面，其他同默认配置（login.jsp页面action为ContextPath/j_spring_security_check）-->     
+  <!-- <security:http pattern="/index.jsp" security="none"/> -->
+  <security:http pattern="/login*" security="none"/>
+  <security:http auto-config="true"> 
+	<security:intercept-url pattern="/product/**" access="ROLE_USER"  />
+	<!-- <security:intercept-url pattern="/login*" access="IS_AUTHENTICATED_ANONYMOUSLY"/> -->
+	<security:form-login login-page="/login.jsp" 
+		authentication-failure-url="/login.jsp?error=true"
+		default-target-url="/product/list"/>
+	<security:logout logout-success-url="/index.jsp"/>
+	
+	<security:intercept-url pattern="/index.jsp" access="ROLE_GUEST"  />
+	<security:anonymous username="guest" granted-authority="ROLE_GUEST"/>
+	
+	
+ </security:http>
+	
+ <!-- 法三 ：自定义login方式，配置去除 auto-config="true" （自定义login.jsp action 处理） -->
+ 
+	<!-- <bean id="authenticationFilter" class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter"> 
+	  <property name="authenticationManager" ref="authenticationManager"/> 
+	  <property name="filterProcessesUrl" value="/common/login-process"/> 
+	</bean>   -->
+	
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider>
+			<security:password-encoder hash="md5">
+				<security:salt-source user-property="username"/>
+			</security:password-encoder>
+			<security:user-service>
+				<!-- password:chenjin123 salt:chenjin md5:chenjin123{chenjin} -->
+				<security:user name="chenjin" password="f8750d3b7ef4e21490c3a973bae2e76d" authorities="ROLE_USER"/> 
+			</security:user-service>
+		</security:authentication-provider>
+	</security:authentication-manager>
+    
+</beans>

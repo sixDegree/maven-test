@@ -1,0 +1,579 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.cj.sys</groupId>
+  <artifactId>sys-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>sys-parent</name>
+  <url>http://maven.apache.org</url>
+  
+  <modules>
+  	<module>../sys-core</module>
+  	<module>../sys-web</module>
+  </modules> 
+  
+  <distributionManagement>
+	<repository>
+		<id>users-releases</id>
+		<name>Users Project Release</name>
+		<url>http://localhost:8081/nexus/content/repositories/myUsersReleases/</url>
+	</repository>
+	
+	<snapshotRepository>
+		<id>users-snapshots</id>
+		<name>Users Project Snapshots</name>
+		<url>http://localhost:8081/nexus/content/repositories/myUersSnapShots/</url>
+	</snapshotRepository>
+  </distributionManagement>
+	
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring.version>3.1.2.RELEASE</spring.version>
+    <springSecurity.version>3.1.3.RELEASE</springSecurity.version>
+    
+   	<mysql.driver>com.mysql.jdbc.Driver</mysql.driver>
+	<mysql.url>jdbc:mysql://localhost:3306/test</mysql.url>
+	<mysql.username>sa</mysql.username>
+	<mysql.password>Aa123456</mysql.password>
+	
+  </properties>
+
+	<dependencyManagement>
+		 <dependencies>
+		 	
+		 <!-- ProjectDepends start -->
+		 <dependency>
+		 	<groupId>${project.groupId}</groupId>
+		 	<artifactId>sys-core</artifactId>
+		 	<version>${project.version}</version>
+		 </dependency>
+		 <dependency>
+		 	<groupId>${project.groupId}</groupId>
+		 	<artifactId>sys-web</artifactId>
+		 	<version>${project.version}</version>
+		 </dependency>
+		  <!-- ProjectDepends end -->
+		 
+		   <dependency>
+		     <groupId>junit</groupId>
+		     <artifactId>junit</artifactId>
+		     <version>4.10</version>
+		     <scope>test</scope>
+		   </dependency>
+		   
+		   <!-- Hibernate4 start -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>4.1.7.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate.javax.persistence</groupId>
+				<artifactId>hibernate-jpa-2.0-api</artifactId>
+				<version>1.0.1.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>org.javassist</groupId>
+				<artifactId>javassist</artifactId>
+				<version>3.16.1-GA</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.hibernate.common</groupId>
+				<artifactId>hibernate-commons-annotations</artifactId>
+				<version>4.0.1.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.spec.javax.transaction</groupId>
+				<artifactId>jboss-transaction-api_1.1_spec</artifactId>
+				<version>1.0.1.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.logging</groupId>
+				<artifactId>jboss-logging</artifactId>
+				<version>3.1.2.GA</version>
+			</dependency>			
+			<dependency>
+				<groupId>dom4j</groupId>
+				<artifactId>dom4j</artifactId>
+				<version>1.6.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>4.3.0.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-testing</artifactId>
+				<version>4.1.7.Final</version>
+			</dependency>
+           <!-- Hibernate4 end -->
+           
+		   <!--  Aspect start -->
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjrt</artifactId>
+				<version>1.7.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjweaver</artifactId>
+				<version>1.7.0</version>
+			</dependency>
+           <!--  Aspect end -->
+		   
+		   <!-- Spring3 start -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context-support</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+		
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-asm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+		
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aspects</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+		
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-expression</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-instrument</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-oxm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+		
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+					
+		   <!-- Spring3 end -->
+		   
+		   <!--  SpringSecurity Start-->
+		   <dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-core</artifactId>
+				<version>${springSecurity.version}</version>
+			</dependency>
+            <dependency>
+			  <groupId>org.springframework.security</groupId>
+			  <artifactId>spring-security-web</artifactId>
+			  <version>${springSecurity.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-config</artifactId>
+				<version>${springSecurity.version}</version>
+			</dependency>
+		   <!--  SpringSecurity End-->
+		    
+		   <!-- slf start-->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.6.6</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>1.6.6</version>
+			</dependency>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>1.2.17</version>
+			</dependency>
+		    <!-- slf end-->
+		     
+		   <!-- DatabaseDriver start -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.21</version>
+			</dependency>
+
+            <!-- 第三方jar包使用
+            
+                      将第三方jar文件安装到本地repository中，使用install:install-file命令：
+             mvn install:install-file 
+            -Dfile=E:\libs\myLibs\db-drivers\oracle.jar
+            -DgroupId=oracle 
+            -DartifactId=oracle 
+            -Dversion=10.2 
+            -Dpackaging=jar 
+            -DgeneratePom=true
+            
+                     发布第三方jar到nexus仓库中，使用 deploy:deploy-file命令：
+            mvn deploy:deploy-file 
+            -Dfile=E:\libs\myLibs\db-drivers\oracle.jar
+            -DgroupId=oracle 
+            -DartifactId=oracle 
+            -Dversion=10.2 
+            -Dpackaging=jar  
+            -Durl=http://localhost:8081/nexus/content/repositories/thirdparty/ 
+			-DrepositoryId=thirdparty
+			
+			注意：
+			1.jar所在目录路径不能含有空格，点号，中文等非ascii字符
+			2.在setting.xml中必须配置仓库的用户名和密码
+			
+			eg:
+			 deploy:deploy-file 
+            -Dfile=E:\libs\myLibs\db-drivers\sqljdbc4.jar 
+            -DgroupId=sqljdbc -DartifactId=sqljdbc -Dversion=2008 
+            -Dpackaging=jar  
+            -Durl=http://localhost:8081/nexus/content/repositories/thirdparty/ 
+            -DrepositoryId=thirdparty       
+            -->
+            <dependency>
+            	<groupId>oracle</groupId>
+            	<artifactId>oracle</artifactId>
+            	<version>10.2</version>
+            </dependency>
+            <dependency>
+			  <groupId>sqljdbc</groupId>
+			  <artifactId>sqljdbc</artifactId>
+			  <version>2008</version>
+			</dependency>
+		   <!-- DatabaseDriver end -->
+		   
+		   <!-- DatabasePool start -->
+		   <dependency>
+				<groupId>commons-dbcp</groupId>
+				<artifactId>commons-dbcp</artifactId>
+				<version>1.4</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-pool</groupId>
+				<artifactId>commons-pool</artifactId>
+				<version>1.6</version>
+			</dependency>
+		    <dependency>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+				<version>1.1.1</version>
+			</dependency> 
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>2.6</version>
+			</dependency>
+		   <!-- DatabasePool end -->
+		   
+		   <!-- fileUpload start -->
+			<dependency>
+				<groupId>commons-fileupload</groupId>
+				<artifactId>commons-fileupload</artifactId>
+				<version>1.2.2</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>2.4</version>
+			</dependency>
+		    <!-- fileUpload end -->
+		    
+			<!-- servlet,jstl,jsp -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>3.0.1</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>jstl</groupId>
+				<artifactId>jstl</artifactId>
+				<version>1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>opensymphony</groupId>
+				<artifactId>sitemesh</artifactId>
+				<version>2.4.2</version>
+			</dependency>
+			<dependency>
+				<groupId>taglibs</groupId>
+				<artifactId>standard</artifactId>
+				<version>1.1.2</version>
+			</dependency> 
+		   
+		   <!-- Ohters -->
+		   <dependency>
+			    <groupId>javax.inject</groupId>
+			    <artifactId>javax.inject</artifactId>
+			    <version>1</version>
+			</dependency>
+			<dependency>
+				<groupId>cglib</groupId>
+				<artifactId>cglib-nodep</artifactId>
+				<version>2.2.2</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.mail</groupId>
+				<artifactId>mail</artifactId>
+				<version>1.4.5</version>
+			</dependency>
+			<dependency>
+				<groupId>net.sf.ehcache</groupId>
+				<artifactId>ehcache-core</artifactId>
+				<version>2.6.0</version>
+			</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.8.11</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.8.11</version>
+		</dependency> 
+		
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>20030211.134440</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+		</dependency>
+
+		 </dependencies>
+	</dependencyManagement>
+ 
+
+
+ <build>
+ 	<pluginManagement>
+ 		<plugins>
+ 		
+ 		<!-- 编译插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<!-- 跳过编译测试类 
+					<skip>true</skip>-->
+				</configuration>
+			</plugin>  
+			
+		<!-- 测试插件 -->
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-surefire-plugin</artifactId>
+			    <version>2.12.4</version>
+			    <configuration>
+			    	<!-- 默认会执行：**/*Test,**/Test*,**/*TestCase 
+			    	但使用include后则不会再包含默认的测试类，只会包含include中指定的测试类 -->
+			    	<includes>
+			    		<include>**/*Test.java</include>
+			    	</includes>
+			    	<!-- 跳过测试，不建议 
+			    	<skip>true</skip> -->
+			    </configuration>
+			  </plugin>
+			  
+		<!-- DB操作插件 -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>sql-maven-plugin</artifactId>
+				<version>1.5</version>
+				<dependencies>
+					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>5.1.21</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<driver>${mysql.driver}</driver>
+					<url>${mysql.url}</url>
+					<username>${mysql.username}</username>
+					<password>${mysql.password}</password>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>execute</goal>
+						</goals>
+						<configuration>
+							<srcFiles>
+								<srcFile>test.sql</srcFile>
+							</srcFiles>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<!-- web发布jetty插件 -->	     
+ 			<plugin>
+			  <groupId>org.mortbay.jetty</groupId>
+			  <artifactId>jetty-maven-plugin</artifactId>
+			  <configuration>
+			    <scanIntervalSeconds>10</scanIntervalSeconds>
+			    <stopKey>foo</stopKey>
+                <stopPort>9999</stopPort>
+			    <webApp>
+			      <contextPath>/MySys</contextPath>
+			    </webApp>
+			    <connectors>
+			       <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+			          <port>9090</port>
+			          <maxIdleTime>60000</maxIdleTime>
+			       </connector>
+			     </connectors>
+			  </configuration>
+			</plugin>
+			
+ 		</plugins>
+ 	</pluginManagement>
+ </build>
+ 
+  <!--
+  mvn:site 生成站点 
+   在reporting中配置具体要生成的报告数据 
+   -->
+<reporting>
+	<plugins>
+	<!-- Generate standard project reports. -->
+	 <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>2.6</version>
+        <reportSets>
+          <reportSet>
+          	<!--  确定要生成哪些页面  -->
+            <reports>
+              <report>dependencies</report>
+              <report>project-team</report>
+              <report>mailing-list</report>
+              <report>index</report>
+              <report>issue-tracking</report>
+              <report>license</report>
+              <report>scm</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+      
+	  <!-- 生成测试报告 Generate a report based on the results of unit tests.-->
+	  <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>2.12.4</version>
+      </plugin>
+	  
+	   <!-- 生成JavaDoc -->
+	   <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9</version>
+       </plugin>
+       
+	  <!-- 生成源代码文档 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jxr-plugin</artifactId>
+        <version>2.3</version>
+      </plugin>
+      
+	   <!-- Generate a PMD report. -->
+	   <plugin>
+       <groupId>org.apache.maven.plugins</groupId>
+       <artifactId>maven-pmd-plugin</artifactId>
+       <version>2.7.1</version>
+     </plugin>
+      
+	   <!-- 生成测试覆盖率报告（默认已有，可直接执行 cobertura:cobertura）-->
+	   <plugin>
+         <groupId>org.codehaus.mojo</groupId>
+         <artifactId>cobertura-maven-plugin</artifactId>
+         <version>2.5.2</version>
+         <configuration>
+         	<formats>
+         		<format>html</format>
+         		<format>xml</format>
+         	</formats>
+         </configuration>
+      </plugin>        
+	</plugins>
+</reporting>
+
+</project>
