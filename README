@@ -1,41 +1,34 @@
-1. first/01,02 :Maven ³õÌåÑé£¬ÊÖ¶¯±àĞ´µÄÏîÄ¿£¬02ÒÀÀµÓÚ01£¬cmdÏÂmvnÉú³É
-
-2. users : Maven ÍêÕûÏîÄ¿
+1. first/01,02 :Maven åˆä½“éªŒï¼Œæ‰‹åŠ¨ç¼–å†™çš„é¡¹ç›®ï¼Œ02ä¾èµ–äº01ï¼Œcmdä¸‹mvnç”Ÿæˆ
+2. users : Maven å®Œæ•´é¡¹ç›®
 	- user-aggregation
-		+ Ö»ÓĞÒ»¸öpom.xmlÎÄ¼ş£¬¾ÛºÏËùÓĞÄ£¿é £¨<packaging>Îªpom£¬<modules> ¾ÛºÏ¸÷Ä£¿é£©
-		+ ¿ÉÓëuser-parentºÏ²¢£¬Ê¡È¥
-					 
+		+ åªæœ‰ä¸€ä¸ªpom.xmlæ–‡ä»¶ï¼Œèšåˆæ‰€æœ‰æ¨¡å— ï¼ˆ<packaging>ä¸ºpomï¼Œ<modules> èšåˆå„æ¨¡å—ï¼‰
+		+ å¯ä¸user-parentåˆå¹¶ï¼Œçœå»
 	- user-parent
-		+ ¸¸Ä£¿é£¬Ö»ÓĞÒ»¸öpom.xmlÎÄ¼ş,<packaging>Îªpom
-		+ ¿É¼ÓÈë<modules> ¾ÛºÏ¸÷Ä£¿é¶øÊ¡È¥user-parentÄ£¿é
-		+ <properties> Ìí¼ÓÊôĞÔ
-		+ <dependencyManagement>¹ÜÀíÒÀÀµ
-		+ <build><pluginManagement>¹ÜÀí²å¼ş
-		
-	- user-core : ×ÓÄ£¿é vo Ê¹ÓÃMySQL£¬Hibernate4.1.7.Final
-	- user-log : ×ÓÄ£¿é log4j ÈÕÖ¾
+		+ çˆ¶æ¨¡å—ï¼Œåªæœ‰ä¸€ä¸ªpom.xmlæ–‡ä»¶,<packaging>ä¸ºpom
+		+ å¯åŠ å…¥<modules> èšåˆå„æ¨¡å—è€Œçœå»user-parentæ¨¡å—
+		+ <properties> æ·»åŠ å±æ€§
+		+ <dependencyManagement>ç®¡ç†ä¾èµ–
+		+ <build><pluginManagement>ç®¡ç†æ’ä»¶
+	- user-core : å­æ¨¡å— vo ä½¿ç”¨MySQLï¼ŒHibernate4.1.7.Final
+	- user-log : å­æ¨¡å— log4j æ—¥å¿—
 	- user-dao  
 	- user-service
 	- user-web
-		+ webÏîÄ¿£¨maven-archetype-webapp£©£¬Ğè¼ÓÈëservlet-apiÒÀÀµ°ü£¨scopeÎªprovided ±àÒëºÍ²âÊÔµÄ¹ı³ÌÓĞĞ§£¬×îºóÉú³Éwar°üÊ±²»»á¼ÓÈë£©
-		+ hello.jsp (web.xmlÀÏ°æ±¾Ä¬ÈÏ»áºöÂÔEL£¬ÒªÊ¹ÓÃEL±í´ïÊ½£¬ĞèÔÚjspÒ³Ãæ¼ÓÈë£º <%@ page isELIgnored="false" %> »òÕßÊ¹ÓÃĞÂ°æ±¾µÄweb.xml)
-		+ Ê¹ÓÃjetty£¬ÔËĞĞ jetty:run
-
-
-3. ebike : Maven webÏîÄ¿£¬Ê¹ÓÃ Hibernate 4.1.7.Final + SpringWeb3.1.2.RELEASE + SpringSecurity 3.1.3.RELEASE,slf-log4j
-	+ °üº¬ ebike-parent,ebike-core (Hibernate:beans.xml),ebike-dao,ebike-service,ebike-web(SpringSecurity: security.xml,SpringMVC:ebike-servlet.xml)
-	+ pom.xmlÖĞÊ¹ÓÃµÚÈı·½jdbcÇı¶¯°ü£¬²âÊÔ£¬jetty£¬report£¬site·¢²¼
-	+ ebike-webÊ¹ÓÃspring-security Md5¼ÓÃÜ£¬ÄäÃû
-	+ ÓĞ2¸ö°æ±¾£ºebike(oracle) Ê¹ÓÃoracleÊı¾İ¿â £¬ ebike(sql) Ê¹ÓÃsql2008Êı¾İ¿â
-						
-4. sys:Maven webÏîÄ¿
-	+ °üº¬sys-parent,sys-core,sys-web
-	+ pom.xml ÖĞ ·¢²¼ÏîÄ¿µ½×Ô¶¨ÒåreponsitoriesÖĞ
-	+ Hibernate4,SpringWeb 3 ,SpringSecurity,slf-log4j,fileupload,Ä£°åopensymphony
-	+ sys-parent ÖĞÊ¹ÓÃjetty £¬sys-web ÖĞÊ¹ÓÃcargo£¨tomcat£©
-	+ Ç°¶ËÊ¹ÓÃextjs4 £¨Extjs4 Ê×´ÎÊ¹ÓÃ£©
-		
-5. maven-hello-plugin : ×Ô¿ª·¢µÄmaven pluginÏîÄ¿£¨¿×ºÆËùĞ´£©
+		+ webé¡¹ç›®ï¼ˆmaven-archetype-webappï¼‰ï¼Œéœ€åŠ å…¥servlet-apiä¾èµ–åŒ…ï¼ˆscopeä¸ºprovided ç¼–è¯‘å’Œæµ‹è¯•çš„è¿‡ç¨‹æœ‰æ•ˆï¼Œæœ€åç”ŸæˆwaråŒ…æ—¶ä¸ä¼šåŠ å…¥ï¼‰
+		+ hello.jsp (web.xmlè€ç‰ˆæœ¬é»˜è®¤ä¼šå¿½ç•¥ELï¼Œè¦ä½¿ç”¨ELè¡¨è¾¾å¼ï¼Œéœ€åœ¨jspé¡µé¢åŠ å…¥ï¼š <%@ page isELIgnored="false" %> æˆ–è€…ä½¿ç”¨æ–°ç‰ˆæœ¬çš„web.xml)
+		+ ä½¿ç”¨jettyï¼Œè¿è¡Œ jetty:run
+3. ebike : Maven webé¡¹ç›®ï¼Œä½¿ç”¨ Hibernate 4.1.7.Final + SpringWeb3.1.2.RELEASE + SpringSecurity 3.1.3.RELEASE,slf-log4j
+	+ åŒ…å« ebike-parent,ebike-core (Hibernate:beans.xml),ebike-dao,ebike-service,ebike-web(SpringSecurity: security.xml,SpringMVC:ebike-servlet.xml)
+	+ pom.xmlä¸­ä½¿ç”¨ç¬¬ä¸‰æ–¹jdbcé©±åŠ¨åŒ…ï¼Œæµ‹è¯•ï¼Œjettyï¼Œreportï¼Œsiteå‘å¸ƒ
+	+ ebike-webä½¿ç”¨spring-security Md5åŠ å¯†ï¼ŒåŒ¿å
+	+ æœ‰2ä¸ªç‰ˆæœ¬ï¼šebike(oracle) ä½¿ç”¨oracleæ•°æ®åº“ ï¼Œ ebike(sql) ä½¿ç”¨sql2008æ•°æ®åº“
+4. sys:Maven webé¡¹ç›®
+	+ åŒ…å«sys-parent,sys-core,sys-web
+	+ pom.xml ä¸­ å‘å¸ƒé¡¹ç›®åˆ°è‡ªå®šä¹‰reponsitoriesä¸­
+	+ Hibernate4,SpringWeb 3 ,SpringSecurity,slf-log4j,fileupload,æ¨¡æ¿opensymphony
+	+ sys-parent ä¸­ä½¿ç”¨jetty ï¼Œsys-web ä¸­ä½¿ç”¨cargoï¼ˆtomcatï¼‰
+	+ å‰ç«¯ä½¿ç”¨extjs4 ï¼ˆExtjs4 é¦–æ¬¡ä½¿ç”¨ï¼‰
+5. maven-hello-plugin : è‡ªå¼€å‘çš„maven pluginé¡¹ç›®ï¼ˆå­”æµ©æ‰€å†™ï¼‰
 
 
 
