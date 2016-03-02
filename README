@@ -1,25 +1,25 @@
 1. first/01,02 :Maven 初体验，手动编写的项目，02依赖于01，cmd下mvn生成
 
 2. users : Maven 完整项目
-- user-aggregation
-	+ 只有一个pom.xml文件，聚合所有模块 （<packaging>为pom，<modules> 聚合各模块）
-	+ 可与user-parent合并，省去
-				 
-- user-parent
-	+ 父模块，只有一个pom.xml文件,<packaging>为pom
-	+ 可加入<modules> 聚合各模块而省去user-parent模块
-	+ <properties> 添加属性
-	+ <dependencyManagement>管理依赖
-	+ <build><pluginManagement>管理插件
-	
-- user-core : 子模块 vo 使用MySQL，Hibernate4.1.7.Final
-- user-log : 子模块 log4j 日志
-- user-dao  
-- user-service
-- user-web
-	+ web项目（maven-archetype-webapp），需加入servlet-api依赖包（scope为provided 编译和测试的过程有效，最后生成war包时不会加入）
-	+ hello.jsp (web.xml老版本默认会忽略EL，要使用EL表达式，需在jsp页面加入： <%@ page isELIgnored="false" %> 或者使用新版本的web.xml)
-	+ 使用jetty，运行 jetty:run
+	- user-aggregation
+		+ 只有一个pom.xml文件，聚合所有模块 （<packaging>为pom，<modules> 聚合各模块）
+		+ 可与user-parent合并，省去
+					 
+	- user-parent
+		+ 父模块，只有一个pom.xml文件,<packaging>为pom
+		+ 可加入<modules> 聚合各模块而省去user-parent模块
+		+ <properties> 添加属性
+		+ <dependencyManagement>管理依赖
+		+ <build><pluginManagement>管理插件
+		
+	- user-core : 子模块 vo 使用MySQL，Hibernate4.1.7.Final
+	- user-log : 子模块 log4j 日志
+	- user-dao  
+	- user-service
+	- user-web
+		+ web项目（maven-archetype-webapp），需加入servlet-api依赖包（scope为provided 编译和测试的过程有效，最后生成war包时不会加入）
+		+ hello.jsp (web.xml老版本默认会忽略EL，要使用EL表达式，需在jsp页面加入： <%@ page isELIgnored="false" %> 或者使用新版本的web.xml)
+		+ 使用jetty，运行 jetty:run
 
 
 3. ebike : Maven web项目，使用 Hibernate 4.1.7.Final + SpringWeb3.1.2.RELEASE + SpringSecurity 3.1.3.RELEASE,slf-log4j
